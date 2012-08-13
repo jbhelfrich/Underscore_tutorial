@@ -1,0 +1,32 @@
+{
+    "company_employees" : {
+        "employee_1" : {
+            "header": "Bob's Profile",
+            "name": "Bob Robertson",
+            "address": "1010 Some Street, New York, NY, 10001",
+            "phone": "(212) 555-1212",
+            "interests": "Bob likes apples, big ones and floating ones."
+        },
+        "employee_2" : {
+            "header": "Jane's Profile",
+            "name": "Jane Smith",
+            "address": "852 Some Ave, Brooklyn, NY, 10002",
+            "phone": "(212) 555-2323",
+            "interests": "Jane reads comics."
+        },
+        "employee_3" : {
+            "header": "Tom's Profile",
+            "name": "Tom Williams",
+            "address": "1 Penn Plaza, New York, NY, 10001",
+            "phone": "(212) 555-3434",
+            "interests": "Tom is a train fanatic."
+        },
+        "employee_4" : {
+            "header": "Sally's Profile",
+            "name": "Sally Williams",
+            "address": "1 Some Other Street, Newark, NJ, 07101",
+            "phone": "(201) 555-1212",
+            "interests": "Sally hates trains so much she takes the ferry to work."
+        }
+    }
+}

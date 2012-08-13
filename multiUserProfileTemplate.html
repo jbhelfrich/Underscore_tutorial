@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Staff Profile Page</title>
+    <meta charset="utf-8">
+    <script src="scripts/underscore.js"></script>
+    <script src="scripts/jquery-1.7.2.js"></script>
+    <script>
+        window.onload = initPage;
+        function initPage() {
+            // All of this code is unchanged, except we're getting a different JSON file.
+            var exampleValues = {},
+                    parsedTemplate = "",
+                    templateText = $('#profileTemplate').html(),
+                    demoTemplate = _.template(templateText);
+            $.ajax({url: "data/multiprofiledata.json", async: false, dataType: "json", success: function(json) {exampleValues = json;}});
+            // The for loop runs the values for each employee through the demoTemplate function,
+            // and builds the parsedTemplate HTML from the results.
+            for (employee in exampleValues.company_employees) {
+                parsedTemplate += demoTemplate(exampleValues.company_employees[employee]);
+            }
+            // The rest of the page is the same as the previous example.
+            $("#profileBlock").html(parsedTemplate);
+        }
+    </script>
+</head>
+<body>
+    <div id="profileBlock"></div>
+    <script id="profileTemplate" type="text/template">
+        <h1><%= header %></h1>
+        <h3>Name: <%= name %></h3>
+        <h3>Address: <%= address %></h3>
+        <h3>Phone: <%= phone %></h3>
+        <p>Interests: <%= interests %></p>
+    </script>
+</body>
+</html>
